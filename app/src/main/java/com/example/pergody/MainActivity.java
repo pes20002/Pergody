@@ -18,7 +18,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void Create(View view) {
-        Intent intent = new Intent (this, CreateGoal.class);
+        Intent intent = new Intent(this, CreateGoal.class);
+        startActivity(intent);
+    }
+
+    public void ViewGoal(View view) {
+        Intent intent = new Intent(this, View_goals.class);
         startActivity(intent);
     }
 }

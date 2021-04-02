@@ -1,4 +1,6 @@
 package com.example.pergody;
 
-public class Writer {
+public class View_goals {
+
 }
+
