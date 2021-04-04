@@ -6,26 +6,24 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 import androidx.annotation.Nullable;
 
-public class Data extends SQLiteOpenHelper {
+import com.example.pergody.utility.Utility;
 
-    public String sql = "create data(" +
-            "idGoal int identity," +
-            "NameGoal varchar(40)" +
-            "Description  varchar(60)" +
-            "Plan varchar(60)" +
-            "Deadline date";
-    public Data(@Nullable Context context, @Nullable String name, @Nullable SQLiteDatabase.CursorFactory factory, int version) {
+public class ConectionSQLiteHelper extends SQLiteOpenHelper {
+
+
+    public ConectionSQLiteHelper(@Nullable Context context, @Nullable String name, @Nullable SQLiteDatabase.CursorFactory factory, int version) {
         super(context, name, factory, version);
     }
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL(sql);
-
+        db.execSQL(Utility.CREATE_TABLE_GOAL);
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+        db.execSQL("DROP TABLE IF EXISTS Goal");
+        onCreate(db);
 
     }
 }

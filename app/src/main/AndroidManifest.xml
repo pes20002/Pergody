@@ -14,8 +14,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Pergody">
-        <activity android:name=".DisplayGoal"></activity>
+
         <activity android:name=".CreateGoal" ></activity>
+<!--        <activity android:name=".DisplayGoal"-->
+<!--            android:parentActivityName=".MainActivity">-->
+<!--            &lt;!&ndash; The meta-data tag is required if you support API level 15 and lower &ndash;&gt;-->
+<!--            <meta-data-->
+<!--                android:name="android.support.PARENT_ACTIVITY"-->
+<!--                android:value=".MainActivity" />-->
+<!--        </activity>-->
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
