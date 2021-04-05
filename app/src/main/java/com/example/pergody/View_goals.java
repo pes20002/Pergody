@@ -52,14 +52,13 @@ public class View_goals extends AppCompatActivity {
 
         while (cursor.moveToNext()){
             //goal=new Goal();
-            goal.setName(cursor.getString(0));
-            goal.setDescription(cursor.getString(1));
-            goal.setPlan(cursor.getString(2));
-            goal.setCalendar(cursor.getString(3));
-
+            String name = cursor.getString(0);
+            String description = cursor.getString(1);
+            String plan = cursor.getString(2);
+            String calendar = cursor.getString(3);
+            goal = new Goal(name, description, plan, calendar);
             listGoal.add(goal);
         }
-
         getList();
     }
 
@@ -70,6 +69,10 @@ public class View_goals extends AppCompatActivity {
             listInformation.add(listGoal.get(i).getName()+" - "
                     +listGoal.get(i).getDescription()+" - "+listGoal.get(i).getPlan()+" - "+listGoal.get(i).getCalendar());
         }
+    }
+
+    public void Create(View view) {
+        finish();
     }
 
 

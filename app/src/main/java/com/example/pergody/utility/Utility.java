@@ -8,5 +8,5 @@ public class Utility {
     public static final String PLAN_TAG = "plan";
     public static final String CALENDAR_TAG = "calendar";
 
-    public static final String CREATE_TABLE_GOAL = "CREATE_TABLE" + GOAL_TABLE + "("+NAME_TAG+" TEXT, "+DESCRIPTION_TAG+" TEXT, "+PLAN_TAG+" TEXT, "+CALENDAR_TAG+" TEXT)";
+    public static final String CREATE_TABLE_GOAL = "CREATE TABLE " + GOAL_TABLE + " ("+NAME_TAG+" TEXT, "+DESCRIPTION_TAG+" TEXT, "+PLAN_TAG+" TEXT, "+CALENDAR_TAG+" TEXT)";
 }
